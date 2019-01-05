@@ -1,0 +1,9 @@
+.idea
+*.tfstate
+*.tfstate.backup
+*.tfvars
+*.lock.info
+.terraform
+tfplan
+prism-eks-demo
+config-map-aws-auth.yaml
