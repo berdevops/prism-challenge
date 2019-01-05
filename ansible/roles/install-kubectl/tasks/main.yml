@@ -1,0 +1,30 @@
+--- 
+
+# Download kubectl
+- name: Download kubectl
+  get_url:
+    url: "https://storage.googleapis.com/kubernetes-release/release/v1.13.0/bin/linux/amd64/kubectl"
+    dest: "/tmp/kubectl"
+    validate_certs: no
+
+# Move the file to the correct dir and give privileges 
+- name: Make kubectl executable
+  copy:
+    src: "/tmp/kubectl"
+    dest: "/usr/bin"
+    remote_src: True
+    owner: terraform
+    group: terraform
+    mode: 0755
+
+# Clean up tmp
+- name: Clean up tmp dir 
+  command: rm /tmp/kubectl
+
+# Add .kube dir to the /home/terraform/
+- name: Add kubernetes config dir
+  file:
+    path: /home/terraform/.kube
+    owner: terraform
+    group: terraform
+    state: directory

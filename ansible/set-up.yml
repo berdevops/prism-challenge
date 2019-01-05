@@ -7,5 +7,6 @@
     - ../roles/install-sys-dependencies
     - ../roles/setup-user
     - ../roles/install-terraform
+    - ../roles/install-kubectl
     
     
