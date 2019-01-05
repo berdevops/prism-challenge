@@ -1,0 +1,26 @@
+---
+
+# Download aws-iam-authenticator
+- name: Download aws-iam-authenticator
+  get_url:
+    url: "https://github.com/kubernetes-sigs/aws-iam-authenticator/releases/download/v0.3.0/heptio-authenticator-aws_0.3.0_linux_amd64"
+    dest: "/tmp/heptio-authenticator-aws_0.3.0_linux_amd64"
+    validate_certs: no
+
+# Move the file to the correct dir and give privileges 
+- name: Make aws-iam-authenticator executable
+  copy:
+    src: "/tmp/heptio-authenticator-aws_0.3.0_linux_amd64"
+    dest: "/usr/bin"
+    remote_src: True
+    owner: terraform
+    group: terraform
+    mode: 0755
+
+# Rename file from
+- name: Rename to heptio-authenticator-aws 
+  command: mv /usr/bin/heptio-authenticator-aws_0.3.0_linux_amd64 /usr/bin/heptio-authenticator-aws
+
+# Clean up tmp
+- name: Rename to heptio-authenticator-aws 
+  command: rm /tmp/heptio-authenticator-aws_0.3.0_linux_amd64

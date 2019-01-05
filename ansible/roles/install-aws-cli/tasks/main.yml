@@ -1,0 +1,21 @@
+---
+- name: Install AWS command line interface
+  sudo: yes
+  pip:
+    name: "awscli"
+    version: "1.16.71"
+
+- name: Create .aws directory in the home directory
+  file:
+    path: "/home/terraform/.aws/"
+    state: directory
+    owner: terraform
+    group: terraform
+    mode: 0755
+
+- name: Copy the aws config file to the box
+  template:
+    src: ../templates/aws_config.j2
+    dest: "/home/terraform/.aws/config"
+    owner: terraform
+    group: terraform
