@@ -1,0 +1,9 @@
+---
+
+# install dependencies
+- name: Yum Install Packages
+  yum: name={{item}} state=latest
+  with_items:
+     - wget
+     - unzip
+     - python-pip

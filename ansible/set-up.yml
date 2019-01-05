@@ -1,0 +1,9 @@
+---
+
+- hosts: local
+  become: yes
+
+  roles:
+    - ../roles/install-sys-dependencies
+    
+    
