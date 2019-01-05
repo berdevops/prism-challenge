@@ -1,0 +1,8 @@
+---
+
+# create a non root user in order to operate terraform
+- name: Create terraform user
+  user:
+    name: terraform
+    uid: 4665
+    groups: vagrant
