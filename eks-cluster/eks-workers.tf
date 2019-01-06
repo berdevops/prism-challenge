@@ -38,7 +38,7 @@ resource "aws_launch_configuration" "demo" {
 resource "aws_autoscaling_group" "demo" {
   desired_capacity     = 2
   launch_configuration = "${aws_launch_configuration.demo.id}"
-  max_size             = 2
+  max_size             = 4
   min_size             = 1
   name                 = "prism-eks-demo"
   vpc_zone_identifier  = ["${module.vpc.public_subnets}"]
