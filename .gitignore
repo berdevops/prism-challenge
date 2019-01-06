@@ -1,3 +1,5 @@
 .vagrant
 .terraform.d
 .aws/credentials
+*.crt
+*.key

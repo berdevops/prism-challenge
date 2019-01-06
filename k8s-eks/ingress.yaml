@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: web
+spec:
+  rules:
+  - host: a6fb12f13120611e9ad5e06a95e606f1-1103220842.eu-west-1.elb.amazonaws.com
+    http:
+      paths:
+        - backend:
+            serviceName: web
+            servicePort: 80
