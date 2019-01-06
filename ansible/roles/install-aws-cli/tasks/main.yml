@@ -1,6 +1,6 @@
 ---
+
 - name: Install AWS command line interface
-  sudo: yes
   pip:
     name: "awscli"
     version: "1.16.71"
