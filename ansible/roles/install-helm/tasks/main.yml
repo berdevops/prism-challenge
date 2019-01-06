@@ -1,0 +1,26 @@
+---
+
+- name: download helm
+  unarchive: 
+    src: "https://storage.googleapis.com/kubernetes-helm/helm-v2.12.1-linux-amd64.tar.gz"
+    dest: /tmp
+    copy: no
+  tags: download
+
+- name: create the installation directory
+  file:
+    path: /tmp
+    state: directory
+
+- name: copy helm binary
+  copy:
+    src: /tmp/linux-amd64/helm
+    dest: /usr/local/bin/helm
+    mode: 0755
+    remote_src: yes
+
+- name: create helm soft link
+  file:
+    src: /usr/local/bin/helm
+    dest: /usr/bin/helm
+    state: link

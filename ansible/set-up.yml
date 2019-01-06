@@ -8,6 +8,7 @@
     - ../roles/setup-user
     - ../roles/install-terraform
     - ../roles/install-kubectl
+    - ../roles/install-helm
     - ../roles/install-aws-cli
     - ../roles/install-authenticator
     
