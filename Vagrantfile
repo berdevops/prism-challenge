@@ -8,7 +8,7 @@ Vagrant.configure(2) do |config|
     # KNOWN ISSUE WITH VAGRANT 1.8.5 - https://github.com/mitchellh/vagrant/issues/7610
     config.ssh.insert_key = false
 
-    config.vm.network :forwarded_port, guest: 80, host: 8000
+    #config.vm.network :forwarded_port, guest: 80, host: 8000
     config.ssh.forward_agent = true
 
     config.vm.synced_folder ".", "/home/terraform/challenge", id: "project-root", :owner => "4665", :group => "4665"

@@ -3,8 +3,12 @@ kind: Ingress
 metadata:
   name: web
 spec:
+  tls:
+    - secretName: prism-challenge-tls
+      hosts:
+        - prism-challenge.co.uk
   rules:
-  - host: a6fb12f13120611e9ad5e06a95e606f1-1103220842.eu-west-1.elb.amazonaws.com
+  - host: prism-challenge.co.uk
     http:
       paths:
         - backend:
