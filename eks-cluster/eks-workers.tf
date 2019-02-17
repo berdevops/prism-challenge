@@ -21,7 +21,7 @@ resource "aws_launch_configuration" "demo" {
   iam_instance_profile        = "${aws_iam_instance_profile.demo-node.name}"
   image_id                    = "${data.aws_ami.eks-worker.id}"
   instance_type               = "t2.medium"
-  name_prefix                 = "prism-eks-demo"
+  name_prefix                 = "eks-demo"
   security_groups             = ["${aws_security_group.demo-node.id}"]
   user_data_base64            = "${base64encode(local.demo-node-userdata)}"
 
@@ -35,12 +35,12 @@ resource "aws_autoscaling_group" "demo" {
   launch_configuration = "${aws_launch_configuration.demo.id}"
   max_size             = 4
   min_size             = 1
-  name                 = "prism-eks-demo"
+  name                 = "eks-demo"
   vpc_zone_identifier  = ["${module.vpc.public_subnets}"]
 
   tag {
     key                 = "Name"
-    value               = "prism-eks-demo"
+    value               = "eks-demo"
     propagate_at_launch = true
   }
 
