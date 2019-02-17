@@ -1,5 +1,5 @@
 resource "aws_iam_role" "demo-node" {
-  name = "prism-eks-demo-node"
+  name = "eks-demo-node"
 
   assume_role_policy = <<POLICY
 {
