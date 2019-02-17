@@ -1,4 +1,4 @@
 variable "cluster-name" {
-  default = "prism-eks-demo"
+  default = "eks-demo"
   type    = "string"
 }
