@@ -62,6 +62,9 @@ terraform output config-map-aws-auth
 kubectl apply -f config-map-aws-auth.yaml
 ```
 You should be connected to the cluster to test it run kubectl get nodes
+```sh
+kubectl get nodes
+```
 
 ### Deploy Tiller to the cluster (Optional)
 
