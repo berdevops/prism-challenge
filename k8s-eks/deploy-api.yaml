@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: web
-          image: berdevops/prism
+          image: berdevops/python-api
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 5000
