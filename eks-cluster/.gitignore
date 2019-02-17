@@ -5,5 +5,5 @@
 *.lock.info
 .terraform
 tfplan
-prism-eks-demo
+eks-demo
 config-map-aws-auth.yaml
