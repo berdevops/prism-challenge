@@ -16,6 +16,14 @@ Prerequisites: Vangrant and VirtualBox
 - Create a IAM user using the AWS console and give the relevant privileges
 - clone this repository
 - cd into the project root
+- run
+```sh
+vagrant up
+```
+- ssh into the VM
+```sh
+vagrant ssh
+```
 sudo into the terraform user
 ```sh
 sudo -iu terraform
