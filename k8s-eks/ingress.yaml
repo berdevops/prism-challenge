@@ -4,11 +4,11 @@ metadata:
   name: web
 spec:
   tls:
-    - secretName: prism-challenge-tls
+    - secretName: example-tls
       hosts:
-        - prism-challenge.co.uk
+        - example.co.uk
   rules:
-  - host: prism-challenge.co.uk
+  - host: example.co.uk
     http:
       paths:
         - backend:
