@@ -13,7 +13,7 @@ module "vpc" {
 
   tags = "${
     map(
-     "Name", "prism-eks-demo-node",
+     "Name", "eks-demo-node",
      "kubernetes.io/cluster/${var.cluster-name}", "shared",
     )
   }"
