@@ -88,5 +88,5 @@ kubectl get pods --namespace kube-system | grep tiller
 
 - from the root of the project run
 ```sh
-helm install --debug api-chart/ --name prism
+helm install --debug api-chart/ --name example
 ```
