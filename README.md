@@ -39,7 +39,7 @@ export AWS_SECRET_ACCESS_KEY=<-- Replace with your credentials -->
 ```
 - run 
 ```sh
-cd eks-cluster/
+cd challenge/eks-cluster/
 
 // first
 terraform init
