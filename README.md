@@ -17,7 +17,7 @@ Vagrant and Virtualbox are going to spin a Centos VM locally. Then Ansible will 
 - Create a IAM user using the AWS console and give the relevant privileges
 - clone this repository
 - cd into the project root
-- run
+- run vagrant up
 ```sh
 git clone http://repository.url
 cd terraform-eks/
