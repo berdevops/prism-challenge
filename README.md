@@ -4,12 +4,13 @@
 
 Prerequisites: Vangrant and VirtualBox
 
+- This is just a proof of concept. This project is not intended to production.
+
 * [VirtualBox] - Virtualization tool
 * [Vagrant] - The development environment build tool.
 
 ## How to use it:
-
-- This is just a proof of concept. This project is not intended to production.
+Vagrant and Virtualbox are going to spin a Centos VM locally. Then Ansible will install all the dependencies for this project in this VM. Once the installation is finished, ssh into the VM and you are ready to create the cluster using Terraform and operate it using kubectl.
 
 ### Create the EKS-Cluster
 
@@ -18,6 +19,8 @@ Prerequisites: Vangrant and VirtualBox
 - cd into the project root
 - run
 ```sh
+git clone http://repository.url
+cd terraform-eks/
 vagrant up
 ```
 - ssh into the VM
@@ -36,6 +39,8 @@ export AWS_SECRET_ACCESS_KEY=<-- Replace with your credentials -->
 ```
 - run 
 ```sh
+cd eks-cluster/
+
 // first
 terraform init
 
