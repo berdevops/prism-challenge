@@ -2,7 +2,7 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 Vagrant.configure(2) do |config|
-    config.vm.define "prismChallenge"
+    config.vm.define "terraformChallenge"
     config.vm.box = "geerlingguy/centos7"
 
     # KNOWN ISSUE WITH VAGRANT 1.8.5 - https://github.com/mitchellh/vagrant/issues/7610
@@ -16,7 +16,7 @@ Vagrant.configure(2) do |config|
     # ansible_local runs Ansible from inside the Vagrant
     config.vm.provision "ansible_local" do |ansible|
         ansible.groups = {
-            "local" => ["prismChallenge"]
+            "local" => ["terraformChallenge"]
         }
         ansible.playbook = "ansible/set-up.yml"
         ansible.provisioning_path = "/home/terraform/challenge"
