@@ -56,11 +56,11 @@ The above should create a fully operational EKS cluster with 2 nodes
 terraform output kubeconfig
 ```
 - copy the output to /home/terraform/.kube/config
+- create a file called config-map-aws-auth.yaml (mind the path for this file in your next command) 
 - run
 ```sh
 terraform output config-map-aws-auth
 ```
-- create a file called config-map-aws-auth.yaml
 - copy the output to config-map-aws-auth.yaml
 - run
 ```sh
